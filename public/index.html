@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伙食订餐系统 - 员工下单</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🍽️ 伙食订餐系统</h1>
+      <p>提前两天下单，享受美味健康餐食</p>
+    </div>
+
+    <div class="content">
+      <!-- 订单表单 -->
+      <div class="form-section">
+        <h2>📝 我要下单</h2>
+        
+        <div class="form-group">
+          <label for="name">👤 您的名字</label>
+          <input type="text" id="name" placeholder="请输入您的名字" required>
+        </div>
+
+        <div class="form-group">
+          <label for="date">📅 选择订餐日期</label>
+          <select id="date" required>
+            <option value="">-- 请选择日期 --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>🥘 菜单（请选择3样菜）</label>
+          <div id="dishes" class="dishes-container">
+            <!-- 菜品将动态加载 -->
+          </div>
+        </div>
+
+        <div class="selected-info">
+          <h3>已选菜品</h3>
+          <div id="selectedDishes" class="selected-list">
+            <p class="empty-message">还没有选择菜品</p>
+          </div>
+        </div>
+
+        <button id="submitBtn" class="submit-btn" disabled>提交订单</button>
+      </div>
+
+      <!-- 订单历史 -->
+      <div class="history-section">
+        <h2>📋 您的订单历史</h2>
+        <div id="orderHistory" class="order-history">
+          <p class="empty-message">暂无订单</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>
